@@ -1,0 +1,10 @@
+﻿body {
+}
+.counter
+{
+    font-family: "Courier New", Courier, monospace;
+    font-weight: bold;
+    text-transform: capitalize;
+    font-size: small;
+    color: #0000FF;
+}

@@ -1,0 +1,36 @@
+﻿<%@ Master Language="VB" CodeFile="Dorknozzle.master.vb" Inherits="Dorknozzle" %>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title></title>
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    <form id="form1" runat="server">
+    <asp:ScriptManager ID="DorknozzleScriptManager" runat="server">
+    </asp:ScriptManager>
+    <!-- Header -->
+    <div class="Header">
+        <asp:Image ID="Image1" runat="server" AlternateText="The Official Dorknozzle Company Intranet"
+            Height="174px" ImageUrl="~/Images/header.gif" Width="450px" />
+    </div>
+    <!-- Menu -->
+    <div class="Menu">
+        <asp:SiteMapDataSource ID="dorknozzleSiteMap" runat="server" ShowStartingNode="False" />
+        <asp:Menu ID="dorknozzleMenu" runat="server" DataSourceID="dorknozzleSiteMap">
+            <StaticItemTemplate>
+                <img alt="+" src="Images/book_closed.gif" height="16" style="border-width: 0px" width="16" />
+                <%# Eval("Text")%>
+            </StaticItemTemplate>
+        </asp:Menu>
+    </div>
+    <!-- Content -->
+    <div class="Content">
+        <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+        </asp:ContentPlaceHolder>
+    </div>
+    </form>
+</body>
+</html>
