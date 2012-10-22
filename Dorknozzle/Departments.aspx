@@ -12,9 +12,9 @@
         <%= DateTime.Now.ToLongTimeString() %>.</p>
     <asp:UpdatePanel ID="DepartmentsUpdatePanel" runat="server">
         <ContentTemplate>
-            <asp:UpdateProgress ID="DepartmentsUpdateProgress" runat="server">
+            <asp:UpdateProgress id="DepartmentsUpdateProgress" runat="server">
                 <ProgressTemplate>
-                <p class="UpdateProgress">Updating...</p>
+                    <p class="UpdateProgress">Updating...</p>
                 </ProgressTemplate>
             </asp:UpdateProgress>
             <asp:GridView ID="departmentsGrid" runat="server" AllowPaging="True" AllowSorting="True"

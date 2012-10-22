@@ -76,6 +76,7 @@ Partial Class Departments
         departmentsGrid.DataSource = ds.Tables("Departments").DefaultView
         'departmentsGrid.DataMember = "Employees"
 
+        'Time delay to test the UpdateProgress control
         System.Threading.Thread.Sleep(5000)
 
         departmentsGrid.DataBind()
